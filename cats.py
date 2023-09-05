@@ -43,5 +43,4 @@ for cat in cats:
     if cat.wght >4:
         cat.appease()
         break
-
             
