@@ -39,8 +39,16 @@ cats = [
 for cat in cats:
     cat.angry()
 
-for cat in cats:
-    if cat.wght >4:
-        cat.appease()
+#for cat in cats:
+#    if cat.wght >4:
+#        cat.appease()
+#        break
+
+i = 0
+
+while i< len(cats):
+    if cats[i].wght > 4:
+        cats[i].appease()
         break
+    i +=1
             
