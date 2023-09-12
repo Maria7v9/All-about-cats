@@ -51,4 +51,23 @@ while i< len(cats):
         cats[i].appease()
         break
     i +=1
-            
+
+class CatHouse():
+    def __init__(self, cat):
+        self.label = cat.name
+        self.size = 'small' if cat.wght < 3 else 'big'
+
+    def check_floor_is_strong_enough(self):
+        return True if cat.ground_press() < 0.8 else False
+
+cat2 = Cat("Barsik", 2.5, 4, False)
+house1 = CatHouse(cat2)
+print(house1.label)
+print(f"{house1.size} кошка живет в домике под именем {house1.label}")
+print(house1.check_floor_is_strong_enough())
+
+cat_houses = []
+for cat in cats:
+    cat_houses.append(CatHouse(cat))
+for cat_house in cat_houses:
+    print(f"{cat_house.size} кошка живет в домике под именем {cat_house.label}")
